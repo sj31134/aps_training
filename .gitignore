@@ -1,0 +1,63 @@
+# Autodesk APS / Revit 관련 파일
+# Revit 임시 파일
+*.rvt.*
+*.rfa.*
+RevitTemp/
+RevitCache/
+*.backup
+*.log
+
+# Autodesk APS 캐시
+.aps/
+.aps-cache/
+derivatives/
+output/
+
+# Revit Add-in 파일 (Windows 전용이지만 Mac 호환성 고려)
+*.addin
+*.dll
+
+# 환경 변수 파일
+.env
+.env.local
+.env.*.local
+
+# 의존성
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 빌드 출력
+dist/
+build/
+*.exe
+*.dmg
+*.pkg
+
+# IDE 설정
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS 파일
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# 로그 파일
+logs/
+*.log
+
+# 임시 파일
+tmp/
+temp/
+*.tmp
+
