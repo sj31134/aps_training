@@ -22,6 +22,30 @@ output/
 .env.local
 .env.*.local
 
+# Python 가상환경
+aps/
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Python 패키지
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+
 # 의존성
 node_modules/
 npm-debug.log*

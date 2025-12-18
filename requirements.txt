@@ -1,0 +1,24 @@
+# Autodesk APS (Forge) 개발을 위한 Python 패키지
+# 이 파일은 Mac과 Windows 환경에서 동일한 패키지를 설치하기 위해 사용됩니다.
+# 
+# 사용 방법:
+#   1. 가상환경 생성: python -m venv aps (Windows) 또는 python3 -m venv aps (Mac)
+#   2. 가상환경 활성화: aps\Scripts\activate (Windows) 또는 source aps/bin/activate (Mac)
+#   3. 패키지 설치: pip install -r requirements.txt
+#
+# 새 패키지 추가 시:
+#   pip install [패키지명]
+#   pip freeze > requirements.txt
+#   git add requirements.txt && git commit -m "chore: [패키지명] 추가"
+
+# Autodesk APS SDK (필요시 주석 해제)
+# forge-sdk
+
+# HTTP 요청
+# requests
+
+# 환경 변수 관리
+# python-dotenv
+
+# 기타 필요한 패키지들을 아래에 추가하세요
+
