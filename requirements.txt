@@ -12,7 +12,7 @@
 #   git add requirements.txt && git commit -m "chore: [패키지명] 추가"
 
 # 현재 환경 상태 (2025-01-27 기준)
-# Python 3.12.10
+# Python 3.11.9 (권장: 안정성 및 라이브러리 호환성 고려)
 # pip 25.3
 
 # Autodesk APS SDK (필요시 주석 해제)
