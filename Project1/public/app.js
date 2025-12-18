@@ -67,3 +67,4 @@ function initializeApp() {
 
 // DOM 로드 완료 시 앱 초기화
 document.addEventListener('DOMContentLoaded', initializeApp);
+

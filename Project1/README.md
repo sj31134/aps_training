@@ -16,12 +16,35 @@ Project1/
 │   ├── index.html    # 메인 HTML 파일
 │   ├── styles.css    # 스타일시트
 │   └── app.js        # JavaScript 로직
+├── server/
+│   └── server.js     # Express 서버
+├── package.json      # Node.js 의존성 관리
 └── README.md         # 프로젝트 설명
 ```
 
 ## 사용 방법
 
-1. 웹 브라우저에서 `index.html` 파일 열기
+### Node.js 서버 실행 (권장)
+
+1. 의존성 설치:
+   ```bash
+   npm install
+   ```
+
+2. 서버 시작:
+   ```bash
+   npm start
+   ```
+
+3. 브라우저에서 `http://localhost:3000` 접속
+
+4. "클릭하세요" 버튼 클릭
+
+5. 브라우저 개발자 도구 콘솔에서 로그 확인
+
+### 직접 파일 열기 (대안)
+
+1. 웹 브라우저에서 `public/index.html` 파일 직접 열기
 2. "클릭하세요" 버튼 클릭
 3. 브라우저 개발자 도구 콘솔에서 로그 확인
 
@@ -38,3 +61,4 @@ Project1/
 - 한글 주석 및 문서화
 - 디버깅 로그 (log, error, warning) 포함
 - 쉬운 코드 구현
+
