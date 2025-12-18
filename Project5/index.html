@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APS Viewer Demo - Project5</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" />
+  <style>
+    #viewer-container {
+      width: 100%;
+      height: calc(100vh - 64px);
+      position: relative;
+    }
+    .adsk-viewing-viewer { 
+      width: 100%; 
+      height: 100%; 
+    }
+    .adsk-control-group {
+      display: block !important;
+      visibility: visible !important;
+    }
+    #dashboardBasicButton,
+    #dashboardPanelButton,
+    #dashboardChartsButton,
+    #dashboardGridButton {
+      display: inline-block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    #dashboardExtensionsToolbar {
+      display: block !important;
+      visibility: visible !important;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span class="text-2xl font-bold text-blue-600">ACME</span>
+          </div>
+          <div class="text-xl font-semibold text-gray-800">APS Viewer Demo</div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center space-x-2">
+            <label for="modelSelect" class="text-sm font-medium text-gray-700">
+              Choose a model:
+            </label>
+            <select 
+              id="modelSelect" 
+              name="modelSelect"
+              title="Select a model to view"
+              class="px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            >
+              <option value="">Loading models...</option>
+            </select>
+          </div>
+          <input 
+            id="searchInput" 
+            name="searchInput"
+            type="text"
+            placeholder="Search..." 
+            title="Search"
+            class="px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+          <button 
+            type="button"
+            title="Login"
+            class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Viewer Container -->
+  <div id="viewer-container"></div>
+
+  <!-- APS Viewer SDK -->
+  <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+  
+  <!-- Custom Extensions -->
+  <script src="/extensions/BasicExtension.js"></script>
+  <script src="/extensions/PanelExtension.js"></script>
+  <script src="/extensions/ChartsExtension.js"></script>
+  <script src="/extensions/GridExtension.js"></script>
+  
+  <!-- App -->
+  <script type="module" src="/app.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACC Hub Browser - Project6</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #viewer-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .adsk-viewing-viewer { 
+      width: 100%; 
+      height: 100%; 
+    }
+    .adsk-control-group {
+      display: block !important;
+      visibility: visible !important;
+    }
+    #dashboardBasicButton,
+    #dashboardPanelButton,
+    #dashboardChartsButton,
+    #dashboardGridButton {
+      display: inline-block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    #dashboardExtensionsToolbar {
+      display: block !important;
+      visibility: visible !important;
+    }
+    .viewer-section {
+      display: none;
+    }
+    .viewer-section.active {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <div class="navbar-left">
+        <div class="logo">🏢</div>
+        <h1 class="project-name">ACC Hub Browser</h1>
+      </div>
+      <div class="navbar-right">
+        <span id="currentProject" class="current-project">프로젝트를 선택하세요</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main UI -->
+  <div class="main-container">
+    <!-- 좌측 네비게이터 (1/4 영역) -->
+    <div class="navigator-panel">
+      <div class="navigator-header">
+        <h2>네비게이터</h2>
+      </div>
+      <div class="navigator-content" id="navigatorContent">
+        <div class="loading">로딩 중...</div>
+      </div>
+    </div>
+
+    <!-- 우측 컨텐츠 영역 (3/4 영역) -->
+    <div class="versions-panel">
+      <!-- 버전 목록 섹션 -->
+      <div class="versions-section active" id="versionsSection">
+        <div class="versions-header">
+          <h2 id="versionsTitle">파일을 선택하세요</h2>
+        </div>
+        <div class="versions-content" id="versionsContent">
+          <div class="empty-state">
+            <p>좌측에서 파일을 선택하면 버전 목록이 표시됩니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Viewer 섹션 -->
+      <div class="viewer-section" id="viewerSection">
+        <div class="versions-header">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 id="viewerTitle">APS Viewer</h2>
+            <button id="backToVersions" class="px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700">
+              버전 목록으로 돌아가기
+            </button>
+          </div>
+        </div>
+        <div id="viewer-container" style="flex: 1; position: relative;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APS Viewer SDK -->
+  <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+  
+  <!-- Custom Extensions -->
+  <script src="/extensions/BasicExtension.js"></script>
+  <script src="/extensions/PanelExtension.js"></script>
+  <script src="/extensions/ChartsExtension.js"></script>
+  <script src="/extensions/GridExtension.js"></script>
+  
+  <!-- App -->
+  <script src="app.js"></script>
+</body>
+</html>
+

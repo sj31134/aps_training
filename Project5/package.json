@@ -1,0 +1,13 @@
+{
+  "name": "project5-aps",
+  "version": "1.0.0",
+  "description": "Project5 APS Tutorial copy from Project4",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  }
+}

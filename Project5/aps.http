@@ -1,0 +1,65 @@
+### Get Access Token
+GET https://aps-codepen.autodesk.io/api/token
+Content-Type: application/json
+
+# {
+#   "access_token": "YOUR_ACCESS_TOKEN",
+#   "token_type": "Bearer",
+#   "expires_in": 3600
+# }
+
+### List Models
+GET https://aps-codepen.autodesk.io/api/models
+Content-Type: application/json
+
+### JSON Response (example)
+# [
+#   {
+#     "name": "Shoe",
+#     "urn": "dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLlNob2UuZ2VvbWV0cnk"
+#   },
+#   {
+#     "name": "Race Car",
+#     "urn": "dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLlJhY2VDYXIuZ2VvbWV0cnk"
+#   }
+# ]
+### Autodesk APS API Endpoints
+
+### Step 1: Get Access Token
+# @name getToken
+GET https://aps-codepen.autodesk.io/api/token
+Accept: application/json
+
+# Response:
+# {
+#   "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkF1dG9kZXNrLlBsYXRmb3JtLlNlcnZpY2VzIiwicGkuYXRtIjp0cnVlLCJ0eXAiOiJKV1QifQ...",
+#   "token_type": "Bearer",
+#   "expires_in": 3600
+# }
+
+# Store the access token for use in subsequent requests
+# {{getToken.response.body.access_token}}
+
+### Step 2: List Available Models
+# @name listModels
+GET https://aps-codepen.autodesk.io/api/models
+Accept: application/json
+
+# Response:
+# [
+#   {
+#     "name": "Shoe",
+#     "urn": "dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLlNob2UuZ2VvbWV0cnk"
+#   },
+#   {
+#     "name": "Race Car",
+#     "urn": "dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLlJhY2VDYXIuZ2VvbWV0cnk"
+#   },
+#   {
+#     "name": "Office Building",
+#     "urn": "dXJuOmFkc2sud2lwcHJvZDpmcy5maWxlOnZmLk9mZmljZUJ1aWxkaW5nLmdlb21ldHJ5"
+#   }
+# ]
+
+# No authentication required for this endpoint
+
